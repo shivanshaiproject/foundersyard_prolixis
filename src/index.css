@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-size: 14px;
+    --background: 38 25% 96%;
+    --foreground: 228 10% 15%;
+    --card: 40 30% 99%;
+    --card-foreground: 228 10% 15%;
+    --card-warm: 38 45% 97%;
+    --popover: 40 30% 99%;
+    --popover-foreground: 228 10% 15%;
+    --primary: 243 75% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 35 30% 95%;
+    --secondary-foreground: 228 10% 15%;
+    --muted: 35 20% 92%;
+    --muted-foreground: 228 10% 50%;
+    --accent: 35 25% 94%;
+    --accent-foreground: 228 10% 15%;
+    --destructive: 354 70% 54%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 152 69% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 0%;
+    --vip: 38 92% 50%;
+    --vip-foreground: 0 0% 0%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --input-background: 40 30% 99%;
+    --switch-background: 35 15% 82%;
+    --ring: 243 75% 60%;
+    --radius: 1.25rem;
+    --sidebar: 38 25% 98%;
+    --sidebar-foreground: 228 10% 15%;
+    --sidebar-primary: 243 75% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 25% 94%;
+    --sidebar-accent-foreground: 228 10% 15%;
+    --sidebar-border: 35 20% 90%;
+    --sidebar-ring: 243 75% 60%;
+    --like: 350 80% 55%;
+    --comment: 210 90% 55%;
+    --share: 152 69% 40%;
+    --bookmark: 243 75% 60%;
+  }
+
+  .dark {
+    --background: 20 10% 8%;
+    --foreground: 35 20% 96%;
+    --card: 20 10% 11%;
+    --card-foreground: 35 20% 96%;
+    --card-warm: 25 20% 13%;
+    --popover: 20 10% 11%;
+    --popover-foreground: 35 20% 96%;
+    --primary: 243 70% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 20 10% 16%;
+    --secondary-foreground: 35 20% 96%;
+    --muted: 20 10% 18%;
+    --muted-foreground: 35 15% 60%;
+    --accent: 20 10% 18%;
+    --accent-foreground: 35 20% 96%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 85% 60%;
+    --border: 20 10% 20%;
+    --input: 20 10% 20%;
+    --ring: 20 10% 30%;
+    --sidebar: 20 10% 11%;
+    --sidebar-foreground: 35 20% 96%;
+    --sidebar-primary: 243 70% 65%;
+    --sidebar-primary-foreground: 35 20% 96%;
+    --sidebar-accent: 20 10% 18%;
+    --sidebar-accent-foreground: 35 20% 96%;
+    --sidebar-border: 20 10% 20%;
+    --sidebar-ring: 20 10% 30%;
+    --like: 350 75% 60%;
+    --comment: 210 85% 60%;
+    --share: 152 60% 50%;
+    --bookmark: 243 70% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50;
+  }
+
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, hsl(243 75% 60%), hsl(280 80% 60%));
+  }
+
+  .bg-gradient-subtle {
+    background: linear-gradient(180deg, hsl(var(--background)), hsl(38 20% 94%));
+  }
+
+  .bg-gradient-warm {
+    background: linear-gradient(145deg, hsl(var(--card-warm)), hsl(38 40% 96%));
+  }
+
+  .bg-gradient-cream {
+    background: linear-gradient(165deg, hsl(40 35% 98%), hsl(35 30% 95%));
+  }
+
+  /* Post Card Styles - Premium Creamy Design */
+  .post-card {
+    @apply bg-card rounded-[20px] border border-border/30 p-4 sm:p-5 transition-all duration-150 overflow-hidden;
+    box-shadow: 0 2px 12px -2px hsl(35 40% 50% / 0.06), 0 1px 4px -1px hsl(35 40% 50% / 0.04);
+  }
+
+  .post-card:hover {
+    box-shadow: 0 8px 30px -4px hsl(35 40% 50% / 0.12), 0 4px 12px -2px hsl(35 40% 50% / 0.08);
+    transform: translateY(-2px);
+    @apply border-border/50;
+  }
+
+  .post-card-warm {
+    background: linear-gradient(155deg, hsl(42 50% 98%), hsl(38 45% 96%));
+    @apply border-amber-200/40;
+  }
+
+  .post-card-warm:hover {
+    @apply border-amber-300/50;
+    box-shadow: 0 8px 30px -4px hsl(38 50% 50% / 0.15), 0 4px 12px -2px hsl(38 50% 50% / 0.1);
+  }
+
+  /* Action Button Styles */
+  .action-btn {
+    @apply flex items-center gap-2 px-3.5 py-2 rounded-full text-sm font-medium transition-all duration-150;
+  }
+
+  .action-btn:hover {
+    transform: scale(1.05);
+  }
+
+  .action-btn:active {
+    transform: scale(0.98);
+  }
+
+  .action-btn-like {
+    @apply text-muted-foreground;
+  }
+
+  .action-btn-like:hover {
+    color: hsl(var(--like));
+    background-color: hsl(var(--like) / 0.1);
+  }
+
+  .action-btn-like.active {
+    color: hsl(var(--like));
+  }
+
+  .action-btn-comment {
+    @apply text-muted-foreground;
+  }
+
+  .action-btn-comment:hover {
+    color: hsl(var(--comment));
+    background-color: hsl(var(--comment) / 0.1);
+  }
+
+  .action-btn-share {
+    @apply text-muted-foreground;
+  }
+
+  .action-btn-share:hover {
+    color: hsl(var(--share));
+    background-color: hsl(var(--share) / 0.1);
+  }
+
+  .action-btn-bookmark {
+    @apply text-muted-foreground;
+  }
+
+  .action-btn-bookmark:hover {
+    color: hsl(var(--bookmark));
+    background-color: hsl(var(--bookmark) / 0.1);
+  }
+
+  .action-btn-bookmark.active {
+    color: hsl(var(--bookmark));
+  }
+
+  /* Mention Styles */
+  .mention-link {
+    @apply text-primary font-semibold hover:underline cursor-pointer inline-flex items-center gap-0.5;
+  }
+
+  .hashtag-link {
+    @apply text-primary/80 font-medium hover:text-primary hover:underline cursor-pointer;
+  }
+
+  /* Navigation Styles */
+  .nav-item {
+    @apply flex items-center gap-3.5 px-4 py-3 rounded-2xl text-foreground/70 font-medium transition-all duration-150;
+  }
+
+  .nav-item:hover {
+    @apply bg-accent/80 text-foreground;
+  }
+
+  .nav-item.active {
+    @apply bg-foreground text-background shadow-md;
+  }
+
+  /* Sidebar Card - Creamy Premium */
+  .sidebar-card {
+    @apply bg-card rounded-[20px] border border-border/30 p-4;
+    box-shadow: 0 2px 8px -2px hsl(35 40% 50% / 0.05);
+  }
+
+  /* Feed Tabs */
+  .feed-tab {
+    @apply px-5 py-2.5 text-sm font-semibold text-muted-foreground rounded-full transition-all duration-150;
+  }
+
+  .feed-tab:hover {
+    @apply text-foreground bg-accent/60;
+  }
+
+  .feed-tab.active {
+    @apply bg-foreground text-background shadow-sm;
+  }
+
+  /* Trending Topic */
+  .trending-topic {
+    @apply flex items-center justify-between p-3 rounded-xl hover:bg-accent/60 transition-colors cursor-pointer;
+  }
+
+  /* Follow Button */
+  .follow-btn {
+    @apply px-4 py-1.5 text-sm font-semibold rounded-full border transition-all duration-150;
+  }
+
+  .follow-btn-default {
+    @apply border-foreground/20 bg-foreground text-background hover:bg-foreground/90;
+  }
+
+  .follow-btn-following {
+    @apply border-border bg-card text-foreground hover:bg-destructive hover:text-destructive-foreground hover:border-destructive;
+  }
+
+  /* Composer Card - Creamy */
+  .composer-card {
+    @apply bg-card rounded-[20px] border border-border/30 p-5;
+    box-shadow: 0 2px 12px -2px hsl(35 40% 50% / 0.06);
+  }
+
+  /* Sector Badge */
+  .sector-badge {
+    @apply inline-flex items-center px-2.5 py-1 text-xs font-semibold rounded-full;
+  }
+
+  .sector-badge-ai {
+    @apply bg-violet-100 text-violet-700;
+  }
+
+  .sector-badge-saas {
+    @apply bg-blue-100 text-blue-700;
+  }
+
+  .sector-badge-fintech {
+    @apply bg-emerald-100 text-emerald-700;
+  }
+
+  .sector-badge-default {
+    @apply bg-secondary text-secondary-foreground;
+  }
+
+  /* Avatar Ring */
+  .avatar-ring {
+    background: linear-gradient(135deg, hsl(243 75% 60%), hsl(152 70% 50%), hsl(38 92% 55%));
+    padding: 3px;
+    border-radius: 50%;
+  }
+
+  .avatar-ring-inner {
+    background: hsl(var(--card));
+    padding: 2px;
+    border-radius: 50%;
+  }
+
+  /* Skeleton Shimmer */
+  .skeleton-shimmer {
+    background: linear-gradient(90deg, hsl(var(--muted)) 25%, hsl(var(--accent)) 50%, hsl(var(--muted)) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  @keyframes vip-shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  /* Colorful Category Cards - Vibrant & Eye-catching */
+  .category-card {
+    @apply flex flex-col items-center justify-center gap-2 p-4 rounded-2xl cursor-pointer transition-all duration-200 text-white font-medium;
+    box-shadow: 0 4px 12px -2px hsl(0 0% 0% / 0.15);
+  }
+
+  .category-card:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px -4px hsl(0 0% 0% / 0.25);
+  }
+
+  .category-card-tech {
+    background: linear-gradient(135deg, hsl(243 85% 60%), hsl(260 80% 50%));
+  }
+
+  .dark .category-card-tech {
+    background: linear-gradient(135deg, hsl(243 75% 55%), hsl(260 70% 45%));
+  }
+
+  .category-card-funding {
+    background: linear-gradient(135deg, hsl(152 80% 45%), hsl(165 75% 38%));
+  }
+
+  .dark .category-card-funding {
+    background: linear-gradient(135deg, hsl(152 70% 40%), hsl(165 65% 35%));
+  }
+
+  .category-card-growth {
+    background: linear-gradient(135deg, hsl(38 95% 55%), hsl(28 90% 50%));
+  }
+
+  .dark .category-card-growth {
+    background: linear-gradient(135deg, hsl(38 85% 50%), hsl(28 80% 45%));
+  }
+
+  .category-card-product {
+    background: linear-gradient(135deg, hsl(330 80% 55%), hsl(350 75% 50%));
+  }
+
+  .dark .category-card-product {
+    background: linear-gradient(135deg, hsl(330 70% 50%), hsl(350 65% 45%));
+  }
+
+  .category-card-marketing {
+    background: linear-gradient(135deg, hsl(210 90% 55%), hsl(225 85% 50%));
+  }
+
+  .dark .category-card-marketing {
+    background: linear-gradient(135deg, hsl(210 80% 50%), hsl(225 75% 45%));
+  }
+
+  .category-card-ai {
+    background: linear-gradient(135deg, hsl(280 80% 60%), hsl(300 75% 50%));
+  }
+
+  .dark .category-card-ai {
+    background: linear-gradient(135deg, hsl(280 70% 55%), hsl(300 65% 45%));
+  }
+
+  /* Story Avatar */
+  .story-avatar {
+    @apply relative cursor-pointer;
+  }
+
+  .story-avatar::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, hsl(330 80% 60%), hsl(280 80% 60%), hsl(40 90% 55%));
+    z-index: -1;
+  }
+
+  /* Notification Badge */
+  .notification-badge {
+    @apply absolute -top-1 -right-1 bg-destructive text-destructive-foreground text-xs font-bold min-w-[18px] h-[18px] rounded-full flex items-center justify-center;
+  }
+
+  /* Image Grid */
+  .image-grid {
+    @apply grid gap-1 rounded-2xl overflow-hidden;
+  }
+
+  .image-grid-1 {
+    @apply grid-cols-1;
+  }
+
+  .image-grid-2 {
+    @apply grid-cols-2;
+  }
+
+  .image-grid-3 {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .image-grid-3 > :first-child {
+    grid-row: span 2;
+  }
+
+  /* Input with prefix */
+  .input-with-prefix {
+    @apply relative;
+  }
+
+  .input-with-prefix .prefix {
+    @apply absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground font-medium select-none;
+  }
+
+  .input-with-prefix input {
+    @apply pl-8;
+  }
+
+  /* Dropdown Menu Premium */
+  .dropdown-menu-content {
+    @apply bg-card rounded-2xl border border-border/40 shadow-xl p-1.5;
+  }
+
+  .dropdown-menu-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl cursor-pointer transition-colors;
+  }
+
+  .dropdown-menu-item:hover {
+    @apply bg-accent;
+  }
+
+  .dropdown-menu-item-destructive {
+    @apply text-destructive;
+  }
+
+  .dropdown-menu-item-destructive:hover {
+    @apply bg-destructive/10;
+  }
+
+  /* Username input validation */
+  .username-available {
+    @apply border-success ring-1 ring-success/30;
+  }
+
+  .username-taken {
+    @apply border-destructive ring-1 ring-destructive/30;
+  }
+}
+
+@layer utilities {
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
