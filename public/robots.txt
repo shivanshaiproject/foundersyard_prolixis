@@ -1,0 +1,40 @@
+User-agent: *
+Allow: /
+
+# Block private areas
+Disallow: /admin/
+Disallow: /settings
+Disallow: /wallet
+Disallow: /api/
+Disallow: /auth
+Disallow: /bookmarks
+Disallow: /notifications
+Disallow: /ads/
+Disallow: /creator/
+Disallow: /choose-username
+
+# Sitemap
+Sitemap: https://foundersyard.in/sitemap.xml
+
+# Crawl control (non-Google only)
+User-agent: Bingbot
+Crawl-delay: 5
+
+# Allow AI crawlers intentionally
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
