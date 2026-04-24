@@ -213,16 +213,13 @@ Currently not open for external contributions.
 
 ---
 
-## License
-
-This project is licensed under the MIT License.
-
----
 
 ## Author
 
 Shivansh Tiwari  
 Founder and Developer  
+
+Company:-  PROLIXIS OPC PRIVATE LIMITED
 
 ---
 
