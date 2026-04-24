@@ -12,173 +12,220 @@
   <img src="https://img.shields.io/badge/Status-Active%20Development-yellow?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Version-0.1.0-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Built%20With-React%20%7C%20Node%20%7C%20PostgreSQL-black?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
 </p>
 
 ---
 
-## 📌 Overview
+## Repository
 
-**FoundersYard** is a purpose-built platform designed for **early-stage founders, creators, and innovators** to connect, collaborate, and grow.
-
-Unlike generic platforms, FoundersYard focuses on:
-- 🎯 Relevant networking  
-- 🤝 Real collaboration  
-- 🚀 Execution-driven community  
+https://github.com/shivanshaiproject/foundersyard_prolixis/
 
 ---
 
-## 🔥 Problem Statement
+## Getting Started
 
-Most existing platforms:
-- ❌ Too noisy and generic  
-- ❌ Not founder-focused  
-- ❌ Lack meaningful collaboration tools  
+### Prerequisites
 
-👉 Founders struggle with:
-- Finding the right people  
-- Validating ideas  
-- Discovering real opportunities  
+- Node.js (v16 or higher)
+- npm or yarn
+- PostgreSQL
 
 ---
 
-## 💡 Solution
+### Installation
 
-FoundersYard provides a **structured ecosystem** where users can:
-
-- 👤 Build a credible founder identity  
-- 🤝 Connect with relevant individuals  
-- 🧠 Share ideas and insights  
-- 🚀 Discover opportunities and collaborations  
-
----
-
-## ✨ Core Features
-
-- 🔐 **Authentication & Authorization**  
-- 👤 **Founder Profiles** (skills, ideas, interests)  
-- 🤝 **Smart Networking System**  
-- 📰 **Dynamic Content Feed**  
-- 🚀 **Collaboration & Opportunity Discovery**  
-- 🤖 **ML-Based Feed Ranking & Recommendations**  
-- 📊 **Dashboard & Insights**  
-- 💬 **Real-Time Messaging System**  
+```bash
+git clone https://github.com/shivanshaiproject/foundersyard_prolixis.git
+cd foundersyard_prolixis
+npm install
+```
 
 ---
 
-## 🏗️ System Architecture
+### Environment Configuration
 
-### 🔑 Authentication Module
-Secure login, registration, and role-based access.
+Create a `.env` file in the root directory:
 
-### 👤 Profile Module
-Structured founder identities for credibility.
+```env
+PORT=3000
+DATABASE_URL=your_postgresql_connection_string
+JWT_SECRET=your_secret_key
+```
 
-### 🌐 Networking Engine
-Discover users based on interests, domains, and goals.
+---
 
-### 📰 Content & Feed System
-Posts, engagement (likes/comments), and discussions.
+### Run the Application
 
-### 🚀 Collaboration Module
-Find co-founders and project opportunities.
+```bash
+npm run dev
+```
 
-### 🤖 Recommendation Engine
+Application runs on:
+
+```
+http://localhost:3000
+```
+
+---
+
+## Overview
+
+FoundersYard is designed to enable focused networking, collaboration, and execution for early-stage founders.
+
+It provides:
+- Structured identity building  
+- Relevant networking  
+- Collaboration and opportunity discovery  
+
+---
+
+## Problem
+
+Current platforms:
+- Are too broad and noisy  
+- Do not focus on founders  
+- Lack structured collaboration  
+
+This results in inefficient networking and missed opportunities.
+
+---
+
+## Solution
+
+FoundersYard enables:
+- Founder-focused profiles  
+- Targeted networking  
+- Content-driven engagement  
+- Opportunity discovery and collaboration  
+
+---
+
+## Features
+
+- User authentication and authorization  
+- Founder profile management  
+- Networking system  
+- Content feed and engagement  
+- Collaboration and opportunity discovery  
+- Feed ranking and recommendation system  
+- Dashboard and analytics  
+- Real-time messaging  
+
+---
+
+## System Architecture
+
+### Authentication Module
+Handles user registration and login.
+
+### Profile Module
+Manages user identity and data.
+
+### Networking Module
+Connects users based on relevance.
+
+### Content Feed Module
+Handles posts and engagement.
+
+### Collaboration Module
+Supports co-founder discovery.
+
+### Recommendation Engine
 - Behavioral analysis  
 - Engagement tracking  
-- Personalized feed ranking  
+- Feed ranking logic  
 
-> ⚠️ Currently uses rule-based logic with planned ML optimization.
+Note: Currently rule-based with future ML integration.
 
-### 📊 Dashboard Module
-User insights, activity tracking, and engagement metrics.
+### Dashboard Module
+Tracks activity and insights.
 
-### 💬 Messaging System
-Real-time communication between users.
+### Messaging Module
+Enables real-time communication.
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
-### 🎨 Frontend
+### Frontend
 - React.js  
 - Tailwind CSS  
 
-### 🛠 Backend
+### Backend
 - Node.js  
 - Express.js  
 
-### 🗄 Database
+### Database
 - PostgreSQL  
 
-### 🔐 Authentication
+### Authentication
 - JWT / Clerk  
 
-### 🤖 AI / ML
-- Feed ranking algorithms  
-- Recommendation logic  
+### Recommendation System
+- Rule-based logic  
+- Behavioral ranking  
 
-### 🚀 DevOps
+### DevOps
 - Git & GitHub  
 - Vercel / Cloud  
 
-### 🧰 Tools
+### Tools
 - Visual Studio Code  
 
 ---
 
-## 📈 Vision
+## Project Structure
 
-To build a **high-signal startup ecosystem** where founders don’t just network — they **execute, collaborate, and scale**.
+```bash
+foundersyard_prolixis/
+│
+├── src/
+├── utils/
+├── public/
+├── .env
+├── package.json
+└── README.md
+```
 
----
+## Deployment
 
-## 🚧 Project Status
-
-| Stage        | Status              |
-|-------------|--------------------|
-| Core System | ✅ Completed        |
-| UI/UX       | ⚡ In Progress      |
-| ML System   | 🧠 Planned Upgrade  |
-| Deployment  | 🚀 Ongoing          |
-
----
-
-## 🧪 Future Enhancements
-
-- 🔍 Advanced founder matching  
-- 📡 Real-time collaboration tools  
-- 🤖 Strong ML-based recommendations  
-- 🌍 Multi-language support  
-- 📊 Advanced analytics  
+```bash
+npm run build
+npm start
+```
 
 ---
 
-## 🤝 Contribution
+## Future Enhancements
 
-Currently **closed-source for contributions**.  
-Future roadmap includes open collaboration.
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License**.
+- ML-based recommendation system  
+- Advanced founder matching  
+- Real-time collaboration tools  
+- Multi-language support  
+- Advanced analytics  
 
 ---
 
-## 👨‍💻 Author
+## Contribution
 
-**Shivansh Tiwari**  
-🚀 Founder & Developer  
+Currently not open for external contributions.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
 
 ---
 
-## ⭐ Support
+## Author
 
-If you like this project:
-
-- ⭐ Star this repo  
-- 🍴 Fork it  
-- 📢 Share with other founders  
+Shivansh Tiwari  
+Founder and Developer  
 
 ---
+
+## Support
+
+If you find this project useful, consider starring the repository.
