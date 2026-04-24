@@ -183,7 +183,6 @@ foundersyard_prolixis/
 ├── src/
 ├── utils/
 ├── public/
-├── .env
 ├── package.json
 └── README.md
 ```
